@@ -56,5 +56,4 @@ public class XptoController {
 		xptoAtual.setNome(xpto.getNome());
 		return xptoService.salvar(xptoAtual);
 	}
-
 }

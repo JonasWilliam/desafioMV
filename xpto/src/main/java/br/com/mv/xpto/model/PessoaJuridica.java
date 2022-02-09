@@ -5,7 +5,6 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -57,12 +56,12 @@ public class PessoaJuridica extends Cliente implements Serializable{
 		this.razaoSocial = razaoSocial;
 	}
 
-	public String getCnjp() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnjp(String cnjp) {
-		this.cnpj = cnjp;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public String getNomeFantasia() {

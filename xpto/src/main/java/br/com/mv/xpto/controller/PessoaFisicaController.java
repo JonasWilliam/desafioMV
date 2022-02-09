@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mv.xpto.model.PessoaFisica;
+import br.com.mv.xpto.model.Xpto;
 import br.com.mv.xpto.service.PessoaFisicaService;
 
 @RestController
@@ -46,6 +48,16 @@ public class PessoaFisicaController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deletarPorId(@PathVariable int id) {
 		pfService.excluir(id);
+	}
+	@PutMapping("/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public PessoaFisica atualizar(@PathVariable int id, @RequestBody PessoaFisica pf) {
+		PessoaFisica pfAtual = pfService.buscarPorId(id);
+		pfAtual.setNome(pf.getNome());
+		pfAtual.setContato(pf.getContato());
+		pfAtual.setCpf(pf.getCpf());
+		pfAtual.setEnderecos(pf.getEnderecos());
+		return pfService.salvar(pfAtual);
 	}
 
 }

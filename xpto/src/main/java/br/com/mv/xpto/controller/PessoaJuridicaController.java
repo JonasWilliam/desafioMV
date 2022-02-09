@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.mv.xpto.model.PessoaFisica;
 import br.com.mv.xpto.model.PessoaJuridica;
 import br.com.mv.xpto.service.PessoaJuridicaService;
 
@@ -46,5 +48,18 @@ public class PessoaJuridicaController {
 	public void deletarPorId(@PathVariable int id) {
 		pjService.excluir(id);
 	}
+	@PutMapping("/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public PessoaJuridica atualizar(@PathVariable int id, @RequestBody PessoaJuridica pj) {
+		PessoaJuridica pjAtual = pjService.buscarPorId(id);
+		pjAtual.setNome(pj.getNome());
+		pjAtual.setContato(pj.getContato());
+		pjAtual.setCnpj(pj.getCnpj());
+		pjAtual.setEnderecos(pj.getEnderecos());
+		pjAtual.setNomeFantasia(pj.getNomeFantasia());
+		pjAtual.setRazaoSocial(pj.getRazaoSocial());
+		return pjService.salvar(pjAtual);
+	}
+	
 
 }
