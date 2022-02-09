@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "466e8a9f-a399-4e70-9b43-de5c246b9564",
+		"name": "ApiDesafioMv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar xpto (classe generica)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/xpto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xpto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar xpto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nome\" : \"William\",\r\n    \"descricao\" : \"teste4\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/xpto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xpto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar xpto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/xpto/24",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xpto",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar xpto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/xpto/21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xpto",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Xpto",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Criar PF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Jonas William\",\r\n    \"cpf\": \"10837075408\",\r\n    \"contato\": \"81988902707\",\r\n    \"enderecos\": [\r\n        {\r\n            \"logradouro\": \"R. Dr. João Elísio\",\r\n            \"numeroCasa\": \"364\",\r\n            \"cep\": \"50820230\",\r\n            \"bairro\": \"mangueira\",\r\n            \"cidade\": \"Recife\",\r\n            \"estado\": \"Pernambuco\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar PF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pf",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar PF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pf/26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pf",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar PF",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar PF",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pf/26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pf",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar PJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Pj",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"MV\",\r\n    \"razaoSocial\":\"MV S.A\",\r\n    \"nomeFantasia\":\"MV\",\r\n    \"cnjp\": \"10837075408\",\r\n    \"contato\": \"81988902707\",\r\n    \"enderecos\": [\r\n        {\r\n            \"logradouro\": \"R. Dr. TESTE 1\",\r\n            \"numeroCasa\": \"364\",\r\n            \"cep\": \"50203523\",\r\n            \"bairro\": \"Ipsep\",\r\n            \"cidade\": \"Recife\",\r\n            \"estado\": \"Pernambuco\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar PJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pj/45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pj",
+						"45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar PJ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pj/46",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pj",
+						"46"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
